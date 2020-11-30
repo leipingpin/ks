@@ -150,7 +150,7 @@ span {
 
 .ribbon a:link,
 .ribbon a:visited {
-    color: #000;
+    color: rgb(209, 105, 105);
     text-decoration: none;
     height: 3.5em;
     overflow: hidden;
@@ -164,13 +164,9 @@ span {
     margin-top: 0.5em;
     position: relative;
     -webkit-transition: background-color 0.2s, margin-top 0.2s;
-    /* Saf3.2+, Chrome */
     -moz-transition: background-color 0.2s, margin-top 0.2s;
-    /* FF4+ */
     -ms-transition: background-color 0.2s, margin-top 0.2s;
-    /* IE10 */
-    -o-transition: background-color 0.2s, margin-top 0.2s;
-    /* Opera 10.5+ */
+    -o-transition: background-color 0.2s, margin-top 0.2s; 
     transition: background-color 0.2s, margin-top 0.2s;
 }
 
@@ -193,7 +189,7 @@ span {
     position: absolute;
     top: 3em;
     right: 0;
-    border-left: 0.5em solid #9B8651;
+    border-left: 0.5em solid #c4ac6f;
     border-bottom: 0.5em solid #fff;
 }
 
@@ -234,27 +230,6 @@ audio {
     bottom: 50px;
     right: 0;
 }
-
-.music_img {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 40px;
-    height: 30px;
-    animation: muscis 5s linear infinite;
-}
-
-@keyframes muscis {
-    from {
-        transform: rotate (0deg);
-        opacity: .6;
-    }
-    to {
-        transform: rotate(360deg);
-        opacity: .8;
-    }
-}
-
 .icons {
     display: flex;
     justify-content: space-between;
@@ -279,13 +254,26 @@ audio {
     </style>
 </head>
 <body>
+    <nav>
         <div class="home">
             <div class="content">
-                <div class="stars"></div>
-                <img class="bgc" src="7.jpg" width="100%" alt="">
-                <h3 class="title">冒菜</h3>
-                <h3 class="titles">拥有众多长相相似兄弟的一种美食</h3>
-                <img class="icon" src="7.jpg" alt="">
+           
+                <div class='ribbon'>
+                    <a href='#sy'><span>首页</span></a>
+                    <a href='#js'><span>介绍</span></a>
+                    <a href='./index.html'><span>关于我</span></a>
+            
+                </div>
+            </nav>
+                <section id="sy">
+                    <div class="stars"></div>
+                    <img class="bgc" src="7.jpg" width="100%" alt="">
+                    <h3 class="title">冒菜</h3>
+                    <h3 class="titles">拥有众多长相相似兄弟的一种美食</h3>
+
+                </section>
+
+                <section id="js">
                 <div class="introduce_item">
                     <span class="introduce_item_titles">
                         “冒菜”是四川的特色菜，如果以为这就是一个菜，那就大错特错啦，这只是一种做法而已。用这种方法做出来的菜，就叫“冒菜”。“冒”字在这里是动词，在锅里煮熟，然后盛到碗里，顺便再舀一勺汤汁。冒菜的原料不限，天下食材皆可冒之。
@@ -310,26 +298,15 @@ audio {
                 </div>
                 <div class="introduce_item">
                    <img class="introduce_item_img" src="4.jpg" alt="">
+                   <span class="introduce_item_title"> 
                         红汤，看着就非常有食欲，红彤彤的，重庆人的最爱。
-                    尽管我不能吃辣，但是红汤是我吃冒菜的必选，重庆人最后的倔强。每次吃冒菜都是喝水喝饱的。
-                    <span class="introduce_item_title"> 
-              
+                    尽管我不能吃辣，但是红汤是我吃冒菜的必选，所以每次吃冒菜我都是喝水喝饱的。
+                </span>
+                    
             </div>
-            <audio autoplay="autoplay" id="audio" loop="loop">
-                    <source src="./video/music.mp3" type="audio/MP3">
-                   
-            </audio>
-      
+               
         </div>
-    
+    </section>
     </body>
-    <script>
-        let mucics = document.getElementById('audio')
-        document.body.addEventListener('mousemove', function() {
-            setTimeout(() => {
-                mucics.play();
-            }, 2000);
-        }, false);
-    </script>
 </body>
 </html>
